@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Sniglet', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header{
+    margin: 1rem;
+}
+.header .poke-guide{
+    margin-bottom: 1rem;
+}
+.header .search{
+    font-size: 2rem;
+    width: 300px;
+    font-family: 'Sniglet', cursive;
+    position: relative;
+    text-align: center;
+
+}
+.header .search .input{
+    font-size: 1rem;
+    font-family: inherit;
+    padding-right: 50px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: width .5s ease;
+}
+.header .search .input:focus{
+    outline: none;
+}
+.header .search.active .input{
+    padding-right: 55px;
+    width: 100%;
+}
+.header .search .binoculars:focus{
+    outline: none;
+}
+.header .search .binoculars{
+    font-size: 2.2rem;
+    border: none;
+    position: absolute;
+    left: 7.7rem;
+    top: 1px;
+    height: 50px;
+    width: 53px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #f83600;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+.header .search.active .binoculars{
+    transform: translateX(125px);
+}
+.poke-container{
+    max-width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.poke-container .pokemon-contain{
+   color: #fefefe;
+   margin: 10px;
+   padding: 1rem;
+   border-radius: 10px;
+   box-shadow:  rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+                rgba(0, 0, 0, 0.06) 0px 2px 1px,
+                rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.poke-container .pokemon-contain .poke-img{
+    border-radius: 75% 30% 60% 40% / 60% 40% 60% 40%;
+    background-color: rgba(0, 0, 0, 0.5);    
+}
+.poke-container .pokemon-contain .poke-img img{
+    width: 180px;
+    opacity: 0.5;
+    transition: all .5s ease;
+}
+.poke-container .pokemon-contain .poke-img:hover img{
+    opacity: 1;
+    transform: scale(1.2);
+}
+.poke-container .pokemon-contain .poke-info{
+    margin-top: 1rem;
+    font-family:  'Sniglet', cursive;
+}
+.poke-container .pokemon-contain .poke-info .poke-id{
+    font-family: inherit;
+    margin: 1rem 0;
+}
+.poke-container .pokemon-contain .poke-info .poke-name{
+    text-transform: capitalize;
+    margin: .3rem 0;
+}
+.poke-container .pokemon-contain .poke-info .poke-small{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.3rem;
+}
+.poke-container .pokemon-contain .poke-info .poke-type{
+    text-transform: capitalize;
+    
+}
+
